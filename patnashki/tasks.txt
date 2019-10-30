@@ -1,0 +1,7 @@
+1) creem clasa cell.
+2) amestecam 15 valori si in baza lor creem obiecte de joaca.
+3) vizualizam obiectele create in format HTML 
+!!! joaca o sa fie in canvas , html , svg.
+4) adaugam event delegation pentru a prelua clickurile. 
+5) determinam "miscarea" daca obiectul se afla linga gol atunci el ia locul liber. 
+6)  
