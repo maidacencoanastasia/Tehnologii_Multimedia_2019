@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--  -->
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="alert alert-dark" role="alert">
+            <button type="button" class="btn btn-secondary" id="new_game">
+                Joaca noua
+            </button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalScrollable">
+                Statistica jocului
+            </button>
+        </div>
+      <br>
+        <div>
+            <div class="progress" id="progress">
+                <!-- aici va fi statistica -->
+            </div>
+        </div>
+
+      <br>
+        <div id="accordion">
+    
+            <!--  -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        JOACA CU REALIZARE ÎN FORMAT SVG
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                      <!-- Integrarea SVG -->
+                    <div id="svg"></div>
+                  </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                               JOACA CU REALIZARE ÎN FORMAT HTML
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                            <div id="game"> </div>    
+                      </div>
+                    </div>
+            </div>        
+            <!--  -->
+            <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              JOACA CU REALIZARE ÎN FORMAT CANVAS
+                          </button>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <!-- JOACA in Format HTML -->
+                            <canvas id="smile" width="254" height="254">    
+                            </canvas>
+                            
+                        </div>
+                      </div>
+            </div>  
+        </div>        
+    </div>
+
+<!--  -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">Statistica jocului</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <canvas id="statistics" width="454" height="254" style="margin: auto">    
+              </canvas>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--  -->
+
+
+</body>
+</html>
+<style> 
+
+.container{  
+  border: 1px solid silver;   
+}
+
+#statistics{
+  /* border: 1px solid red;   */
+}
+ .zero {
+     background: silver;
+ }
+ .cell{
+    display: flex;
+    border: 1px solid silver;
+    padding: 5px; 
+    margin: 1px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    fill: silver;
+
+   
+
+ }
+
+#smile {
+ 
+}
+
+ #game{     
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 256px; 
+     padding: 4px
+     
+ }
+
+ text{
+     font-size: 24px;
+     stroke:bisque;
+     fill: bisque;
+     
+ }
+ rect{
+    fill: rgb(175, 181, 185);
+ }
+
+ 
+ 
+</style>
